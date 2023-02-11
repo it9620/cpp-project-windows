@@ -1,0 +1,9 @@
+build
+
+*.zip
+*.7z
+*.rar
+
+*.pdf
+
+*.o
