@@ -20,7 +20,7 @@ Install the binaryes:
 
 ```sh
 pacman -S --needed base-devel mingw-w64-x86_64-toolchain
-# also use:
+# also use (or an other tool after last minus sign):
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-clang mingw-w64-ucrt-x86_64-lldb
 
 ```
@@ -51,15 +51,15 @@ While install use default options.
 While installing additionaly choose to add Cmake into system path.
 	
 Check that CMake is visible, open CMD and type:
-		``` $ cmake --version ```
+		```sh cmake --version ```
 
 ---
 
 4. Install VSCode https://code.visualstudio.com/
 
-    Install c++ extensions pack (default by microsoft).
+Install c++ extensions pack (default by microsoft).
 
-    Make setting.json with content
+Make setting.json with content:
 
 ```json
 {
@@ -74,7 +74,7 @@ Check that CMake is visible, open CMD and type:
 }
 ```
 
-    Configure run (debug) task for gdb/lldb. Modify the content, for example:
+Configure run (debug) task for gdb/lldb. Modify the content, for example:
 
 ```json
 {
