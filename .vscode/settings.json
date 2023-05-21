@@ -1,6 +1,10 @@
 {
-    "cmake.mingwSearchDirs": [
-        "C:\\mingw-w64\\mingw64\\bin"
+    "editor.rulers": [
+        100
     ],
-    "cmake.generator": "MinGW Makefiles"
+    "editor.minimap.enabled": false,
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.additionalCompilerSearchDirs": [
+        "C:\\mingw-w64\\mingw64\\bin"
+    ]
 }

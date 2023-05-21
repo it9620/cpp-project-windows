@@ -1,53 +1,79 @@
-# Instruction to set up win10 build enviroment
+# Instruction to set up windows 10 build enviroment
 
-1) Install Msys2 https://www.msys2.org/ into default directory on C:/ disc.
+1. Install Msys2 https://www.msys2.org/ into default directory on C:/ disc.
 
-	In msys2 console run:
-	
-	$ pacman -Syu
-	repeat it several times for fully update.
-	Also try
-	$ pacman -Su
-	
+In msys2 console run:
+
+```sh
+	pacman -Syu
+```
+Repeat it command several times for fully update.
+Also try
+
+```sh
+    pacman -Su
+```
+
+---
+
+Install the binaryes:
+
+```sh
+
 	pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+    # also use:
+    pacman -S --needed base-devel mingw-w64-ucrt-x86_64-clang mingw-w64-ucrt-x86_64-lldb
 
-    Add msys2 into system path:
-    Run search and start typing "envi". Search must suggest open "Edit the System enviroment variables".
-    In open window at "Advanced" tab, click on "Environment Variables..." it must open enviroment variables window.
-    In Environment Variables window, at lower area named as System variables, find and select "Path", then click edit.
-    Must open another window in which you must click "New" button and past the path to binarys. In common ways it must be C:\msys64\mingw64\bin.
-    Reopen any terminals that was opend before adding and check that binary is visible, by commands like:
+```
+
+---
+
+Add msys2 into system path:
+- Run search and start typing "envi". Search must suggest open "Edit the System enviroment variables".
+- In open window at "Advanced" tab, click on "Environment Variables..." it must open enviroment variables window.
+- In Environment Variables window, at lower area named as System variables, find and select "Path", then click edit.
+- Must was opened another window in which you must click "New" button and past the path to binarys. In common ways it must be C:\msys64\mingw64\bin.
+- Reopen any terminals that was opend before adding and check that binary is visible, by commands like:
+
+```sh
         $ gcc --version
         $ g++ --version
         $ gdb --version
-		
-2) Install git for windows https://git-scm.com/
+```
+
+---
+
+2. Install git for windows https://git-scm.com/
 	While install use default options.
 
-3) install CMake https://cmake.org/download/
+---
+
+3. install CMake https://cmake.org/download/
 	While installing additionaly choose to add Cmake into system path.
 	
 	Check that CMake is visible, open CMD and type:
 		$ cmake --version
-	
-3) Install VSCode https://code.visualstudio.com/
+
+---
+
+4. Install VSCode https://code.visualstudio.com/
 
     Install c++ extensions pack (default by microsoft).
 
     Make setting.json with content
 
-    ~~~
+```json
     {
         "cmake.mingwSearchDirs": [
             "C:\\mingw-w64\\mingw64\\bin"
         ],
         "cmake.generator": "MinGW Makefiles"
     }
-    ~~~
+```
 
     Configure run (debug) task for gdb/lldb. Modify the content, for example:
 
-    ~~~
+```json
     {
         // Use IntelliSense to learn about possible attributes.
         // Hover to view descriptions of existing attributes.
@@ -82,4 +108,4 @@
 
         ]
     }
-    ~~~
+```
