@@ -5,6 +5,8 @@
     "editor.minimap.enabled": false,
     "cmake.sourceDirectory": "${workspaceFolder}",
     "cmake.additionalCompilerSearchDirs": [
-        "C:\\mingw-w64\\mingw64\\bin"
-    ]
+        "C:\\msys64\\mingw64\\bin"
+    ],
+    "cmake.generator": "MinGW Makefiles",
+    "cmake.configureOnOpen": true
 }
